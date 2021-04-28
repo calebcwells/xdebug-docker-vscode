@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+    php:
+        build: .
+        volumes:
+            - ./:/var/www/html/
+            - ./ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+        ports:
+            - "8000:80"
